@@ -26,7 +26,7 @@ aside {
   height: 100vh;
 }
 
-.new-post {
+#news-post {
   height: 44px;
   width: 44px;
   border-radius: 50%;
@@ -39,18 +39,30 @@ aside {
   cursor: pointer;
 }
 
-.new-post a {
+#news-post .rotate {
   transition: all 0.5s;
 }
 
-.new-post:hover a {
+#news-post:hover .rotate {
   transform: scale(1.5);
 }
 
-.new-post a {
+#news-post .rotate {
   color: var(--background-color);
   display: block;
   font-size: 14px;
+}
+
+.rotate {
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.rotate.diagonal {
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .sidebar ul {
