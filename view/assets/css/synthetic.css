@@ -4,6 +4,12 @@
   --font-code: "SF Mono", monospace;
 }
 
+html,
+body {
+  min-height: 100% o !important;
+  height: 100%;
+}
+
 body {
   font-family: var(--system-ui);
   scroll-behavior: smooth;

@@ -2,6 +2,7 @@
   --background-color: #fff;
   --border-bottom: #e8ebed;
   --border-color: #1473e6;
+  --background-hover: #f5f5f5;
   --border: #e8e8e8;
   --color-txt: #000;
   --background-color-menu: #f0f0f0;
@@ -10,9 +11,11 @@
 
 aside {
   background: var(--background-color);
-  padding: 20px 18px 0 18px;
+  padding: 0 8px;
   position: sticky;
   width: auto;
+  float: left;
+  height: 100vh;
 }
 
 .sidebar {
@@ -20,6 +23,7 @@ aside {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 }
 
 .new-post {
@@ -30,6 +34,17 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.new-post a {
+  transition: all 0.5s;
+}
+
+.new-post:hover a {
+  transform: scale(1.5);
 }
 
 .new-post a {
@@ -38,6 +53,33 @@ aside {
   font-size: 14px;
 }
 
-.sidebar ul a {
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: var(--color-txt);
+  height: 72px;
+  width: 72px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+  background-color: var(--background-hover);
+}
+
+.active {
+  background-color: var(--border-bottom);
+}
+
+.txt-menu {
+  display: block;
+  font-size: 10px;
 }
