@@ -7,6 +7,10 @@
   --background-txt: linear-gradient(to right bottom, #ff8f26, #ff5117);
 }
 
+* {
+  font-size: 14px;
+}
+
 header {
   background-color: var(--background-color);
   border-bottom: 1px solid var(--border-bottom);
@@ -90,12 +94,11 @@ input[type="text"] {
 .account a {
   color: var(--color-txt);
   display: block;
-  font-size: 14px;
   font-weight: 500;
 }
 
 .signup a {
-  padding: 9px 20px;
+  padding: 7px 20px;
   border-radius: 20px;
   background: var(--background-txt);
   color: var(--background-color);

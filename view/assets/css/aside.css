@@ -1,0 +1,43 @@
+:root {
+  --background-color: #fff;
+  --border-bottom: #e8ebed;
+  --border-color: #1473e6;
+  --border: #e8e8e8;
+  --color-txt: #000;
+  --background-color-menu: #f0f0f0;
+  --background-txt: linear-gradient(to right bottom, #ff8f26, #ff5117);
+}
+
+aside {
+  background: var(--background-color);
+  padding: 20px 18px 0 18px;
+  position: sticky;
+  width: auto;
+}
+
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-post {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-post a {
+  color: var(--background-color);
+  display: block;
+  font-size: 14px;
+}
+
+.sidebar ul a {
+  color: var(--color-txt);
+}
