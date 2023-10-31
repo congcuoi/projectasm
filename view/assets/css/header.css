@@ -1,0 +1,103 @@
+:root {
+  --background-color: #fff;
+  --border-bottom: #e8ebed;
+  --border: #e8e8e8;
+  --color-txt: #000;
+  --background-color-menu: #f0f0f0;
+  --background-txt: linear-gradient(to right bottom, #ff8f26, #ff5117);
+}
+
+header {
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-bottom);
+  padding: 14px 28px;
+}
+
+.row.wrap-header {
+  /* height: 66px; */
+  align-items: center;
+}
+
+.logo {
+  height: auto;
+  width: auto;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo a {
+  display: block;
+}
+
+.logo img {
+  max-height: 38px;
+  max-width: 38px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.logoTxt {
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.account {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.form-search {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  height: 40px;
+  padding: 0 16px 0 8px;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  width: 420px;
+  display: flex;
+  align-content: center;
+}
+
+button[type="submit"],
+input[type="text"] {
+  border: 0;
+  background-color: transparent;
+  opacity: 75%;
+}
+
+button[type="submit"] {
+  opacity: 50%;
+}
+
+input[type="text"] {
+  outline: none !important;
+  width: 100%;
+}
+
+.account {
+  align-items: center;
+}
+
+.account a {
+  color: var(--color-txt);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.signup a {
+  padding: 9px 20px;
+  border-radius: 20px;
+  background: var(--background-txt);
+  color: var(--background-color);
+}

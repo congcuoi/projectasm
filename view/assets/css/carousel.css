@@ -1,0 +1,32 @@
+:root {
+  --cta-hover-color-one: #8828fa;
+  --background-gradient-one: linear-gradient(
+    to right,
+    rgb(136, 40, 250),
+    rgb(89, 169, 250)
+  );
+  --cta-hover-color-one: #6828fa;
+  --background-gradient-two: linear-gradient(
+    to right,
+    rgb(104, 40, 250),
+    rgb(255, 186, 164)
+  );
+  --cta-hover-color-three: #2877fa;
+  --background-gradient-three: linear-gradient(
+    to right,
+    rgb(40, 119, 250),
+    rgb(103, 23, 205)
+  );
+  --cta-hover-color-four: #7612ff;
+  --background-gradient-four: linear-gradient(
+    to right,
+    rgb(118, 18, 255),
+    rgb(5, 178, 255)
+  );
+  --cta-hover-color-five: #fe215e;
+  --background-gradient-five: linear-gradient(
+    to right,
+    rgb(254, 33, 94),
+    rgb(255, 148, 2)
+  );
+}
