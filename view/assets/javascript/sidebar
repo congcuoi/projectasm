@@ -1,4 +1,0 @@
-var a = document.getElementById("rotate");
-a.addEventListener("click", function () {
-  this.classList.toggle("diagonal", true);
-});
