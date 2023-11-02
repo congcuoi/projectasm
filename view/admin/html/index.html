@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,14 +48,15 @@
             <hr>
             <ul class="app-menu">
                 <li><a class="app-menu__item" href="./customer.html"><i class='app-menu__icon bx bx-tachometer'></i><span
-                            class="app-menu__label">Bảng điều khiển</span></a></li>
+                            class="app-menu__label">Quản lý người dùng</span></a></li>
                 <li><a class="app-menu__item" href="./order.html"><i class='app-menu__icon bx bx-user-voice'></i><span
-                            class="app-menu__label">Quản lý Người dùng</span></a></li>
+                            class="app-menu__label">Quản lý Khóa học</span></a></li>
                 <li><a class="app-menu__item" href="./product.html"><i
-                            class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý Khóa Học</span></a>
+                            class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">
+                                Quản lý bài học</span></a>
                 </li>
                 <li><a class="app-menu__item" href="./orderdetail.html"><i class='app-menu__icon bx bx-task'></i><span
-                            class="app-menu__label">Quản Lý Bài Học</span></a></li>
+                            class="app-menu__label">Quản lý bài viết</span></a></li>
             </ul>
         </aside>
         <main class="app-content">
@@ -77,9 +77,9 @@
                         <div class="col-md-6">
                             <div class="widget-small primary coloured-icon"><i class='icon bx bxs-user-account fa-3x'></i>
                                 <div class="info">
-                                    <h4>Tổng khách hàng</h4>
-                                    <p><b>${requestScope.user} khách hàng</b></p>
-                                    <p class="info-tong">Tổng số khách hàng được quản lý.</p>
+                                    <h4>TỔNG NGƯỜI DÙNG</h4>
+                                    <p><b>${requestScope.user} người dùng</b></p>
+                                    <p class="info-tong">Tổng số người dùng được quản lý.</p>
                                 </div>
                             </div>
                         </div>
@@ -87,9 +87,9 @@
                         <div class="col-md-6">
                             <div class="widget-small info coloured-icon"><i class='icon bx bxs-data fa-3x'></i>
                                 <div class="info">
-                                    <h4>Tổng sản phẩm</h4>
-                                    <p><b>${requestScope.product} sản phẩm</b></p>
-                                    <p class="info-tong">Tổng số sản phẩm được quản lý.</p>
+                                    <h4>TỔNG KHÓA HỌC</h4>
+                                    <p><b>${requestScope.product} khóa học</b></p>
+                                    <p class="info-tong">Tổng số khóa học được quản lý.</p>
                                 </div>
                             </div>
                         </div>
@@ -97,9 +97,9 @@
                         <div class="col-md-6">
                             <div class="widget-small warning coloured-icon"><i class='icon bx bxs-shopping-bags fa-3x'></i>
                                 <div class="info">
-                                    <h4>Tổng đơn hàng</h4>
-                                    <p><b>${requestScope.bill} đơn hàng</b></p>
-                                    <p class="info-tong">Tổng số hóa đơn bán hàng trong tháng.</p>
+                                    <h4>Tổng Bài Học</h4>
+                                    <p><b>${requestScope.bill} bài học</b></p>
+                                    <p class="info-tong">Tổng số bài học.</p>
                                 </div>
                             </div>
                         </div>
@@ -107,14 +107,14 @@
                         <div class="col-md-6">
                             <div class="widget-small danger coloured-icon"><i class='icon bx bxs-error-alt fa-3x'></i>
                                 <div class="info">
-                                    <h4>Sắp hết hàng</h4>
-                                    <p><b>${requestScope.low} sản phẩm</b></p>
-                                    <p class="info-tong">Số sản phẩm cảnh báo hết cần nhập thêm.</p>
+                                    <h4>TỔNG BÀI VIẾT</h4>
+                                    <p><b>${requestScope.low} bài viết</b></p>
+                                    <p class="info-tong">Số bài viết.</p>
                                 </div>
                             </div>
                         </div>
                         <!-- col-12 -->
-                        <div class="col-md-12">
+                        <!-- <div class="col-md-12">
                             <div class="tile">
                                 <h3 class="tile-title">Đơn hàng hôm nay</h3>
                                 <div>
@@ -149,106 +149,106 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <!-- / div trống-->
+                                / div trống
                             </div>
-                        </div>
+                        </div> -->
                         <!-- / col-12 -->
                     </div>
                 </div>
             </div>
 
 
-            <div class="text-center" style="font-size: 13px">
-                <p><b>Copyright
-                        <script type="text/javascript">
-                            document.write(new Date().getFullYear());
-                        </script> Phần mềm quản lý Website
-                    </b></p>
-            </div>
-        </main>
-        <script src="admin/js/jquery-3.2.1.min.js"></script>
-        <!--===============================================================================================-->
-        <script src="admin/js/popper.min.js"></script>
-        <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
-        <!--===============================================================================================-->
-        <script src="admin/js/bootstrap.min.js"></script>
-        <!--===============================================================================================-->
-        <script src="admin/js/main.js"></script>
-        <!--===============================================================================================-->
-        <script src="admin/js/plugins/pace.min.js"></script>
-        <!--===============================================================================================-->
-        <!--===============================================================================================-->
-        <script type="text/javascript">
-                            var data = {
-                                labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
-                                datasets: [{
-                                        label: "Dữ liệu đầu tiên",
-                                        fillColor: "rgba(255, 213, 59, 0.767), 212, 59)",
-                                        strokeColor: "rgb(255, 212, 59)",
-                                        pointColor: "rgb(255, 212, 59)",
-                                        pointStrokeColor: "rgb(255, 212, 59)",
-                                        pointHighlightFill: "rgb(255, 212, 59)",
-                                        pointHighlightStroke: "rgb(255, 212, 59)",
-                                        data: [20, 59, 90, 51, 56, 100]
-                                    },
-                                    {
-                                        label: "Dữ liệu kế tiếp",
-                                        fillColor: "rgba(9, 109, 239, 0.651)  ",
-                                        pointColor: "rgb(9, 109, 239)",
-                                        strokeColor: "rgb(9, 109, 239)",
-                                        pointStrokeColor: "rgb(9, 109, 239)",
-                                        pointHighlightFill: "rgb(9, 109, 239)",
-                                        pointHighlightStroke: "rgb(9, 109, 239)",
-                                        data: [48, 48, 49, 39, 86, 10]
-                                    }
-                                ]
-                            };
-                            var ctxl = $("#lineChartDemo").get(0).getContext("2d");
-                            var lineChart = new Chart(ctxl).Line(data);
+                <div class="text-center" style="font-size: 13px">
+                    <p><b>Copyright
+                            <script type="text/javascript">
+                                document.write(new Date().getFullYear());
+                            </script> Phần mềm quản lý Website
+                        </b></p>
+                </div>
+            </main>
+            <script src="admin/js/jquery-3.2.1.min.js"></script>
+            <!--===============================================================================================-->
+            <script src="admin/js/popper.min.js"></script>
+            <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+            <!--===============================================================================================-->
+            <script src="admin/js/bootstrap.min.js"></script>
+            <!--===============================================================================================-->
+            <script src="admin/js/main.js"></script>
+            <!--===============================================================================================-->
+            <script src="admin/js/plugins/pace.min.js"></script>
+            <!--===============================================================================================-->
+            <!--===============================================================================================-->
+            <script type="text/javascript">
+                                var data = {
+                                    labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6"],
+                                    datasets: [{
+                                            label: "Dữ liệu đầu tiên",
+                                            fillColor: "rgba(255, 213, 59, 0.767), 212, 59)",
+                                            strokeColor: "rgb(255, 212, 59)",
+                                            pointColor: "rgb(255, 212, 59)",
+                                            pointStrokeColor: "rgb(255, 212, 59)",
+                                            pointHighlightFill: "rgb(255, 212, 59)",
+                                            pointHighlightStroke: "rgb(255, 212, 59)",
+                                            data: [20, 59, 90, 51, 56, 100]
+                                        },
+                                        {
+                                            label: "Dữ liệu kế tiếp",
+                                            fillColor: "rgba(9, 109, 239, 0.651)  ",
+                                            pointColor: "rgb(9, 109, 239)",
+                                            strokeColor: "rgb(9, 109, 239)",
+                                            pointStrokeColor: "rgb(9, 109, 239)",
+                                            pointHighlightFill: "rgb(9, 109, 239)",
+                                            pointHighlightStroke: "rgb(9, 109, 239)",
+                                            data: [48, 48, 49, 39, 86, 10]
+                                        }
+                                    ]
+                                };
+                                var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+                                var lineChart = new Chart(ctxl).Line(data);
 
-                            var ctxb = $("#barChartDemo").get(0).getContext("2d");
-                            var barChart = new Chart(ctxb).Bar(data);
-        </script>
-        <script type="text/javascript">
-            //Thời Gian
-            function time() {
-                var today = new Date();
-                var weekday = new Array(7);
-                weekday[0] = "Chủ Nhật";
-                weekday[1] = "Thứ Hai";
-                weekday[2] = "Thứ Ba";
-                weekday[3] = "Thứ Tư";
-                weekday[4] = "Thứ Năm";
-                weekday[5] = "Thứ Sáu";
-                weekday[6] = "Thứ Bảy";
-                var day = weekday[today.getDay()];
-                var dd = today.getDate();
-                var mm = today.getMonth() + 1;
-                var yyyy = today.getFullYear();
-                var h = today.getHours();
-                var m = today.getMinutes();
-                m = checkTime(m);
-                nowTime = h + ":" + m + "";
-                if (dd < 10) {
-                    dd = '0' + dd
-                }
-                if (mm < 10) {
-                    mm = '0' + mm
-                }
-                today = day + ', ' + dd + '/' + mm + '/' + yyyy;
-                tmp = '<span class="date"> ' + today + ' - ' + nowTime +
-                        '</span>';
-                document.getElementById("clock").innerHTML = tmp;
-                clocktime = setTimeout("time()", "1000", "Javascript");
-
-                function checkTime(i) {
-                    if (i < 10) {
-                        i = "0" + i;
+                                var ctxb = $("#barChartDemo").get(0).getContext("2d");
+                                var barChart = new Chart(ctxb).Bar(data);
+            </script>
+            <script type="text/javascript">
+                //Thời Gian
+                function time() {
+                    var today = new Date();
+                    var weekday = new Array(7);
+                    weekday[0] = "Chủ Nhật";
+                    weekday[1] = "Thứ Hai";
+                    weekday[2] = "Thứ Ba";
+                    weekday[3] = "Thứ Tư";
+                    weekday[4] = "Thứ Năm";
+                    weekday[5] = "Thứ Sáu";
+                    weekday[6] = "Thứ Bảy";
+                    var day = weekday[today.getDay()];
+                    var dd = today.getDate();
+                    var mm = today.getMonth() + 1;
+                    var yyyy = today.getFullYear();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    m = checkTime(m);
+                    nowTime = h + ":" + m + "";
+                    if (dd < 10) {
+                        dd = '0' + dd
                     }
-                    return i;
-                }
-            }
-        </script>
-    </body>
+                    if (mm < 10) {
+                        mm = '0' + mm
+                    }
+                    today = day + ', ' + dd + '/' + mm + '/' + yyyy;
+                    tmp = '<span class="date"> ' + today + ' - ' + nowTime +
+                            '</span>';
+                    document.getElementById("clock").innerHTML = tmp;
+                    clocktime = setTimeout("time()", "1000", "Javascript");
 
-</html>
+                    function checkTime(i) {
+                        if (i < 10) {
+                            i = "0" + i;
+                        }
+                        return i;
+                    }
+                }
+            </script>
+        </body>
+
+    </html>
