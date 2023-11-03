@@ -27,21 +27,29 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <c:forEach items="${user}" var="u">
+                                    <?php
+                                        while ($row = $user->fetch_assoc() ) {
+                                    ?>
                                         <tr>
-                                            <td>${u.user_id}</td>
-                                            <td>${u.user_name}</td>
-                                            <td>${u.user_email}</td>
-                                            <td>${u.isAdmin}</td>
-                                            <td>${u.isAdmin}</td>
-                                            <td><button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal"
-                                                        data-target="#ModalUP${u.user_id}"><i class="fas fa-edit"></i></button>
-                                                <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" value="${p.product_id}"><i
-                                                            class="fas fa-trash-alt"></i>
-                                                </button>       
-                                            </td>
+                                            <form action="">
+                                                <td><?php echo $row['idUser']?></td>
+                                                <td><?php echo $row['name']?></td>
+                                                <td><?php echo $row['Username']?></td>
+                                                <td><?php echo $row['Password']?></td>
+                                                <td><?php echo $row['Email']?></td>
+                                                <td><button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal"
+                                                            data-target="#ModalUP${u.user_id}"><i class="fas fa-edit"></i></button>
+                                                    <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" value="${p.product_id}"><i
+                                                                class="fas fa-trash-alt"></i>
+                                                    </button>       
+                                                </td>
+                                            </form>
+                                            
                                         </tr>
-                                    </c:forEach>
+                                    <?php 
+                                    }
+                                    ?>
+                                        
                                 </tbody>
                             </table>
 

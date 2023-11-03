@@ -33,14 +33,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <c:forEach items="${ProductData}" var="p">
+                                        <?php
+                                            while ($row = $lesson->fetch_assoc()) {
+                                        ?>
                                             <tr>
-                                                <td>${p.product_id}</td>
-                                                <td>${p.cate.category_name}</td>
-                                                <td>${p.product_name}</td>
-                                                <td>${p.product_price}</td>
-                                                <td>${c.color}</td>
-                                                <td>${p.quantity}</td>
+                                                <td><?php echo $row['idLesson']?></td>
+                                                <td><?php echo $row['title']?></td>
+                                                <td><?php echo $row['VideoURL']?></td>
+                                                <td><?php echo $row['Content']?></td>
+                                                <td><?php echo $row['idPartLesson']?></td>
+                                                <td>Chưa liên kết bảng</td>
                                                 <td>
                                                     <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" value="${p.product_id}"><i
                                                             class="fas fa-trash-alt"></i>
@@ -50,12 +52,15 @@
                                                     </button>
                                                 </td>
                                             </tr>
+                                        <?php
+                                        }
+                                        ?>
 
                                             <!--
                                             MODAL
                                             -->
 
-                                        <div class="modal fade" id="ModalUP${p.product_id}" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"
+                                        <!-- <div class="modal fade" id="ModalUP${p.product_id}" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"
                                              data-keyboard="false">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
@@ -108,7 +113,7 @@
                                                                 <label class="control-label">Số lượng</label>
                                                                 <input class="form-control" type="text" name="product_quantity" value="${p.quantity}">
                                                             </div>
-                                                            <!--anh san pham-->
+                                                            anh san pham
                                                             <div class="form-group col-md-12">
                                                                 <label class="control-label">Ảnh sản phẩm</label>
                                                                 <div id="myfileupload">
@@ -131,11 +136,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <!--
                                       MODAL
                                         -->
-                                    </c:forEach>
                                     </tbody>
                                 </table>
                             </form>

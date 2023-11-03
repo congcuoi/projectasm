@@ -23,33 +23,47 @@
                                         <th>Tiêu đề khóa học</th>
                                         <th>Giáo Viên</th>
                                         <th>Giá</th>
-                                        <th>Decription</th>
+                                        <th>Mô tả</th>
                                         <th width="350">Tk đăng kí</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                        while ($row = $course->fetch_assoc()) {
+                                    ?>
                                         <tr>
-                                            <td>${b.bill_id}</td>
-                                            <td>${b.user.user_name}</td>
-                                            <td>(+84)${b.phone}</td>
-                                            <td>${b.address}</td>
-                                            <td>${b.date}</td>
+                                            <td><?php echo $row['idCourse']?></td>
+                                            <td><?php echo $row['CourseTitle']?></td>
+                                            <td><?php echo $row['idTeacher']?></td>
+                                            <td><?php echo $row['Price']?></td>
+                                            <td><?php echo $row['Description']?></td>
                                             <td>
                                                 <div class="accordion-item">
                                                         <button class="accordion-button accordion-header" type="button" data-bs-toggle="collapse" 
-                                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        data-bs-target="#collapseOne<?php echo $row['idCourse']?>" aria-expanded="true" aria-controls="collapseOne<?php echo $row['idCourse']?>">
                                                             Danh Sách người dùng đăng kí
                                                         </button>
-                                                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                                        <div id="collapseOne<?php echo $row['idCourse']?>" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                                             <div class="accordion-body">
                                                                 <ul>
-                                                                    <li>Từ Công Hòa</li>
+                                                                    <?php
+                                                                        $URC = getUserRegisterCourse($data, $row['idCourse']);
+                                                                        while ($rowCoures = $URC->fetch_assoc()) {
+                                                                    ?>
+                                                                            <li><?php echo $rowCoures['idUser']?></li>
+                                                                    <?php
+                                                                    }
+                                                                    ?>
+                                                                    
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                 </div>
                                             </td>
                                         </tr>
+                                    <?php
+                                }?>
+                                        
                                 </tbody>
                             </table>
                         </div>
