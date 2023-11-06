@@ -21,9 +21,9 @@
                                     <tr>
                                         <th>ID khóa học</th>
                                         <th>Tiêu đề khóa học</th>
+                                        <th>Hình ảnh khóa học</th>
                                         <th>Giáo Viên</th>
                                         <th>Giá</th>
-                                        <th>Mô tả</th>
                                         <th width="350">Tk đăng kí</th>
                                     </tr>
                                 </thead>
@@ -34,9 +34,9 @@
                                         <tr>
                                             <td><?php echo $row['idCourse']?></td>
                                             <td><?php echo $row['CourseTitle']?></td>
+                                            <td><img src="<?php echo $row['imgCourse']?>" alt="" style="width: 150px; height: 100px;"></td>
                                             <td><?php echo $row['idTeacher']?></td>
                                             <td><?php echo $row['Price']?></td>
-                                            <td><?php echo $row['Description']?></td>
                                             <td>
                                                 <div class="accordion-item">
                                                         <button class="accordion-button accordion-header" type="button" data-bs-toggle="collapse" 

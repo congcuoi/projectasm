@@ -15,7 +15,6 @@
             case 'CourseManagement':{
                 require_once "./model/course.php";
                 $course = getAllCourse($data);
-                
                 require_once "./layout/CourseManagement.php";
                 break;
             }
@@ -23,7 +22,6 @@
                 require_once "./model/Lesson.php";
                 $lesson = getAllLesson($data);
                 require_once "./layout/LessonManagement.php";
-
                 break;
             }
             case 'PostManagement':{
@@ -34,6 +32,17 @@
             case 'createNew':{
                 require_once "./layout/createNew.php";
 
+                break;
+            }
+
+
+            //page LessonManagement
+            case 'deleteLesson': {
+                            
+                break;
+            }
+            case 'editLesson':{
+                require_once "./layout/editLesson.php";
                 break;
             }
             
