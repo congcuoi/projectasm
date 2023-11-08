@@ -50,7 +50,7 @@
                                                                         $URC = getUserRegisterCourse($data, $row['idCourse']);
                                                                         while ($rowCoures = $URC->fetch_assoc()) {
                                                                     ?>
-                                                                            <li><?php echo $rowCoures['idUser']?></li>
+                                                                            <li><?php echo $rowCoures['name']?></li>
                                                                     <?php
                                                                     }
                                                                     ?>

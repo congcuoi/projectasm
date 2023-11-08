@@ -11,41 +11,67 @@
                         <h3 class="tile-title">Chỉnh sửa thông tin người dùng</h3>
                         <div class="tile-body">
 
-                            <form class="row" action="" method="POST" enctype="multipart/form-data">
+                            <form class="row" action="index.php?page=formEditUser&idUser=<?php echo $userById['idUser']?>" method="POST" enctype="multipart/form-data">
                                 <div class="text-center">
                                     <img src="<?php echo $userById['avatar']?>" class="rounded" alt="">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label class="control-label">Mã người dùng</label>
-                                    <input class="form-control" name="product_id" type="text" value="<?php echo $userById['idUser']?>">
+                                    <input class="form-control" name="id" type="text" value="<?php echo $userById['idUser']?>">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label class="control-label">Tên người dùng</label>
-                                    <input class="form-control" name="product_name" type="text" value="<?php echo $userById['name']?>">
+                                    <input class="form-control" name="name" type="text" value="<?php echo $userById['name']?>">
                                 </div>
                                 <div class="form-group  col-md-3">
                                     <label class="control-label">Tên đăng nhập</label>
-                                    <input class="form-control" name="price" type="text" value="<?php echo $userById['Username']?>">
+                                    <input class="form-control" name="username" type="text" value="<?php echo $userById['Username']?>">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label class="control-label">Mật khẩu</label>
-                                    <input class="form-control" name="size" type="text" value="<?php echo $userById['Password']?>">
+                                    <input class="form-control" name="password" type="text" value="<?php echo $userById['Password']?>">
                                 </div>
                                 <div class="form-group  col-md-3">
                                     <label class="control-label">Email</label>
-                                    <input class="form-control" name="quantity" type="text" value="<?php echo $userById['Email']?>">
+                                    <input class="form-control" name="email" type="text" value="<?php echo $userById['Email']?>">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label class="control-label">Vai trò</label>
-                                    <input class="form-control" name="color" type="text" value="<?php echo $role?>">
+                                    <input class="form-control" name="role" type="text" value="<?php echo $role?>">
                                 </div>
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Id Khóa học đã đăng kí</th>
+                                            <th scope="col">Tên khóa học</th>
+                                            <th scope="col">Tiến độ học tập</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                            <?php 
+                                                while ($row = $Learning->fetch_assoc()) { ?>
+                                                <tr>
+                                                    <td><?php echo $row['idCourse']?></td>
+                                                    <td><?php echo $row['CourseTitle']?></td>
+                                                    <td><?php echo $row['CompletionPercentage']?></td>
+                                                </tr>
+                                            <?php
+                                            }
+                                            ?>
+                                            
+                                        
+                                    </tbody>
+                                </table>
+
                                 
                                 <button class="btn btn-save" type="submit">Lưu lại</button>
                                 &nbsp;
                                 <a class="btn btn-cancel" href="productmanager">Hủy bỏ</a>
                             </form>
                         </div>
-
+                        
                     </div>
                 </div>
             </div>

@@ -15,4 +15,12 @@
         $Product = $result->fetch_assoc();
         return $Product;
     }
+
+
+    function updateLessonById($title, $videoURL, $content, $id_lesson, $data) {
+        $sql_update_lesson_byId = "UPDATE lesson SET title = ? , VideoURL = ? , Content = ? WHERE idLesson = ?";
+        $query = $data->prepare($sql_update_lesson_byId);
+        $query->bind_param("sssi",$title, $videoURL, $content, $id_lesson);
+        $query->execute();
+    }
 ?>

@@ -20,49 +20,29 @@
                                     <tr>
                                         <th>ID Bài Viết</th>
                                         <th>Tiêu đề bài viết</th>
+                                        <th>Hình ảnh</th>
                                         <th>Nội Dung</th>
                                         <th>Ngày Đăng</th>
                                         <th>Tên Người Đăng</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php 
+                                        while ($row = $post->fetch_assoc()) {
+                                    ?> 
                                         <tr>
-                                            <td></td>
-                                            <td>
-                                                <div class="accordion-item">
-                                                        <button class="accordion-button accordion-header" type="button" data-bs-toggle="collapse" 
-                                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                            Accordion Item #1
-                                                        </button>
-                                                        <div width = "100" style="width: 120px;" id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <p>
-                                                                    Build vertically collapsing accordions in combination 
-                                                                    with our Collapse JavaScript plugin
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="accordion-item">
-                                                        <button class="accordion-button accordion-header" type="button" data-bs-toggle="collapse" 
-                                                        data-bs-target="#ContentPost" aria-expanded="true" aria-controls="ContentPost">
-                                                            Accordion Item #1
-                                                        </button>
-                                                        <div width = "100" style="width: 120px;" id="ContentPost" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <p>
-                                                                    Build vertically collapsing accordions in combination 
-                                                                    with our Collapse JavaScript plugin
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                            </td>
-                                            <td>${d.size}</td>
-                                            <td>${d.color}</td>
+                                            <td><?php echo $row['idPost']?></td>
+                                            <td><?php echo $row['Title']?></td>
+                                            <td><?php echo $row['imgPort']?></td>
+                                            <td><?php echo $row['Content']?></td>
+                                            <td><?php echo $row['Date']?></td>
+                                            <td><?php echo $row['name']?></td>
                                         </tr>
+                                            
+                                    <?php
+                                    }
+                                    ?>
+                                        
                                 </tbody>
                             </table>
                         </div>
