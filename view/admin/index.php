@@ -42,13 +42,40 @@
                 break;
             }
             case 'editLesson':{
-                require_once "./layout/editLesson.php";
+                if(isset($_GET['idLesson']) && $_GET['idLesson'] != ""){
+                    require_once "./model/Lesson.php";
+                    $id_lesson = $_GET['idLesson'];
+                    $lessonById = getLessonById($id_lesson, $data);
+                    require_once "./layout/editLesson.php";
+                }
+                break;
+            }
+
+            //page userManagement
+            case 'editUser': {
+                if(isset($_GET['idUser']) && $_GET['idUser'] != ""){
+                    require_once "./model/user.php";
+                    $id_user = $_GET['idUser'];
+                    $userById = getUserById($data, $id_user);
+                    $role = $userById['Role'];
+                    if($role == 1){
+                        $role = 'Admin';
+                    }if($role == 0){
+                        $role = 'Người Dùng';
+                    }
+                    require_once "./layout/editUser.php";
+                    
+                }  
+                break;
+            }
+            case 'deleteUser': {
+                header('Location: ./layout/userManagement.php');
                 break;
             }
             
             
             default:
-                # code...
+
                 break;
         }
     }

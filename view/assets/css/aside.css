@@ -20,15 +20,13 @@ aside {
 
 .sidebar {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
   height: 100vh;
 }
 
 #news-post {
-  height: 44px;
-  width: 44px;
   border-radius: 50%;
   background-color: var(--border-color);
   display: flex;
@@ -39,30 +37,52 @@ aside {
   cursor: pointer;
 }
 
-#news-post .rotate {
+#news-post #rotate {
   transition: all 0.5s;
 }
 
-#news-post:hover .rotate {
+/* #news-post:hover #rotate {
   transform: scale(1.5);
-}
+} */
 
-#news-post .rotate {
+#news-post #rotate {
   color: var(--background-color);
-  display: block;
   font-size: 14px;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.rotate {
-  -moz-transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+#rotate {
+  -moz-transition: all 0.7s linear;
+  -webkit-transition: all 0.7s linear;
+  transition: all 0.7s linear;
+  position: relative;
 }
 
-.rotate.diagonal {
+.diagonal {
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+#model-news {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--background-color);
+  min-width: 200px;
+  padding: 20px;
+  border-radius: 14px;
+  color: #444;
+  font-size: 13px;
+  box-shadow: 0 0 5px 0 rgb(0, 0, 0.1);
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate3d(26.4px, 62.4px, 0px);
 }
 
 .sidebar ul {

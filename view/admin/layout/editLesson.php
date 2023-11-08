@@ -13,11 +13,11 @@
                             <form class="row" action="productmanager?action=insertproduct" method="POST" enctype="multipart/form-data">
                                 <div class="form-group col-md-3">
                                     <label class="control-label">Tiêu đề bài học</label>
-                                    <input class="form-control" name="product_name" type="text">
+                                    <input class="form-control" name="product_name" type="text" value="<?php echo $lessonById['title']?>">
                                 </div>
                                 <div class="form-group  col-md-3">
                                     <label class="control-label">Video URL</label>
-                                    <input class="form-control" name="price" type="number">
+                                    <input class="form-control" name="price" type="text" value="<?php echo $lessonById['VideoURL']?>">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="exampleSelect1" class="control-label">Khóa học</label>
@@ -38,10 +38,10 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <label class="control-label">Mô tả</label>
-                                    <textarea class="form-control" name="describe" id="describe"></textarea>
+                                    <label class="control-label">Nội Dung</label>
+                                    <textarea class="form-control" name="describe" id="describe"><?php echo $lessonById['Content']?></textarea>
                                 </div>
-                                <button class="btn btn-save" type="submit">Lưu lại</button>
+                                <button class="btn btn-save" type="submit">Lưu Lại</button>
                                 &nbsp;
                                 <a class="btn btn-cancel" href="productmanager">Hủy bỏ</a>
                             </form>

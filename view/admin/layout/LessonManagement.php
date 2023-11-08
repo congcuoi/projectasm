@@ -49,7 +49,7 @@
                                                     </button>
                                                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                                                             data-toggle="modal" data-target="#ModalUP${p.product_id}">
-                                                            <a href="index.php?page=editLesson"><i class="fas fa-edit"></i></a>
+                                                            <a href="index.php?page=editLesson&idLesson=<?php echo $row['idLesson']?>"><i class="fas fa-edit"></i></a>
                                                     </button>
                                                 </td>
                                             </tr>

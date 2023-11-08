@@ -37,10 +37,11 @@
                                                 <td><?php echo $row['Username']?></td>
                                                 <td><?php echo $row['Password']?></td>
                                                 <td><?php echo $row['Email']?></td>
-                                                <td><button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal"
-                                                            data-target="#ModalUP${u.user_id}"><i class="fas fa-edit"></i></button>
-                                                    <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" value="${p.product_id}"><i
-                                                                class="fas fa-trash-alt"></i>
+                                                <td><button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp" data-toggle="modal">
+                                                        <a href="index.php?page=editUser&idUser=<?php echo $row['idUser']?>"><i class="fas fa-edit"></i></a>
+                                                    </button>
+                                                    <button class="btn btn-primary btn-sm trash" type="button" title="Xóa" value="${p.product_id}">
+                                                        <a href="index.php?page=deleteUser&idUser=<?php echo $row['idUser']?>"><i class="fas fa-trash-alt"></i></a>
                                                     </button>       
                                                 </td>
                                             </form>

@@ -9,7 +9,7 @@
         if(!$connect){
             die('Connect error ( ' . mysqli_connect_error() . ')');
         }
-        //echo 'connect success';
+        echo 'connect success';
         return $connect;
     }
 ?>
